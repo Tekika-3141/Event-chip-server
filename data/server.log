@@ -1,0 +1,157 @@
+[2026-10-08 08:36:26] SERVER start http port 8000
+[2026-10-08 08:36:39] GET / 127.0.0.1
+[2026-10-08 08:37:01] GET /admin 127.0.0.1
+[2026-10-08 08:37:13] ADMIN login 127.0.0.1
+[2026-10-08 08:41:35] SERVER stop
+[2026-10-08 08:45:11] SERVER start http port 8000
+[2026-10-08 08:45:18] GET / 127.0.0.1
+[2026-10-08 08:45:25] GET /admin 127.0.0.1
+[2026-10-08 08:51:50] SERVER stop
+[2026-10-08 08:52:27] SERVER start http port 8000
+[2026-10-08 08:52:39] GET / 127.0.0.1
+[2026-10-08 08:53:24] GET /admin 127.0.0.1
+[2026-10-08 08:53:26] ADMIN login 127.0.0.1
+[2026-10-08 08:53:35] GET / 127.0.0.1
+[2026-10-08 08:53:44] GET /dealer 127.0.0.1
+[2026-10-08 08:54:26] ADMIN add code JO1_Player1 (500 pt)
+[2026-10-08 08:54:59] ADMIN session start JO1_Player1 (500 pt)
+[2026-10-08 08:55:14] POINT +10 JO1_Player1 Blackjack by ogino -> 510
+[2026-10-08 10:36:15] ADMIN session end JO1_Player1 (final 510 pt)
+[2026-10-08 10:36:40] SERVER stop
+[2026-10-08 10:38:11] SERVER start http port 8000
+[2026-10-08 10:38:32] GET / 127.0.0.1
+[2026-10-08 10:38:43] GET /admin 127.0.0.1
+[2026-10-08 10:38:57] ADMIN login 127.0.0.1
+[2026-10-08 10:39:29] GET / 127.0.0.1
+[2026-10-08 10:39:32] GET /dealer 127.0.0.1
+[2026-10-08 10:39:44] ADMIN session start JO1_Player1 (500 pt)
+[2026-10-08 10:40:17] POINT +1000 JO1_Player1 Roulette by ogino -> 1500
+[2026-10-08 10:40:56] ADJUST -200 JO1_Player1 -> 1300
+[2026-10-08 10:41:28] ADMIN add code JO1_Player2 (8000 pt)
+[2026-10-08 10:41:32] ADMIN session start JO1_Player2 (8000 pt)
+[2026-10-08 10:42:10] POINT -8000 JO1_Player2 Blackjack by ogino -> 0
+[2026-10-08 10:42:23] ADMIN session end JO1_Player1 (final 1300 pt)
+[2026-10-08 10:42:30] ADMIN code JO1_Player1 active=False
+[2026-10-08 10:42:33] ADMIN code JO1_Player1 active=True
+[2026-10-08 10:42:52] GET /admin 127.0.0.1
+[2026-10-08 10:43:24] ADMIN session start JO1_Player1 (500 pt)
+[2026-10-08 11:28:45] SERVER stop
+[2026-10-08 11:29:50] SERVER start http port 8000
+[2026-10-08 11:29:58] GET / 127.0.0.1
+[2026-10-08 11:30:10] GET /admin 127.0.0.1
+[2026-10-08 11:30:13] ADMIN login 127.0.0.1
+[2026-10-08 11:30:50] GET / 127.0.0.1
+[2026-10-08 11:30:53] GET /dealer 127.0.0.1
+[2026-10-08 11:31:39] POINT -100 JO1_Player1 Roulette by ogino -> 400
+[2026-10-08 11:31:53] ADMIN session end JO1_Player1 (final 400 pt)
+[2026-10-08 11:32:02] ADMIN add code JO1_Player3 (100 pt)
+[2026-10-08 11:32:05] ADMIN session start JO1_Player3 (100 pt)
+[2026-10-08 11:32:36] POINT +9989 JO1_Player3 Poker by ogino -> 10089
+[2026-10-08 11:35:52] SERVER start http port 8000
+[2026-10-08 11:35:55] GET / 127.0.0.1
+[2026-10-08 11:36:02] GET / 127.0.0.1
+[2026-10-08 11:36:04] GET /admin 127.0.0.1
+[2026-10-08 11:36:08] ADMIN login 127.0.0.1
+[2026-10-08 11:36:10] GET /dealer 127.0.0.1
+[2026-10-08 11:36:20] ADMIN session start JO1_Player1 (500 pt)
+[2026-10-08 11:36:38] POINT +200 JO1_Player1 Poker by ogino -> 700
+[2026-10-08 11:37:06] ADJUST -50 JO1_Player1 -> 650
+[2026-10-08 11:37:36] GET /dealer 127.0.0.1
+[2026-10-08 11:40:44] GET / 127.0.0.1
+[2026-10-08 11:40:45] GET /dealer 127.0.0.1
+[2026-10-08 12:57:10] SERVER stop
+[2026-10-08 13:12:38] SERVER start http port 8000
+[2026-10-08 13:12:49] GET /admin 127.0.0.1
+[2026-10-08 13:12:55] GET / 127.0.0.1
+[2026-10-08 13:13:11] GET /dealer 127.0.0.1
+[2026-10-08 13:13:14] GET /admin 127.0.0.1
+[2026-10-08 13:13:19] ADMIN login 127.0.0.1
+[2026-10-08 13:13:38] ADMIN reset code JO1_Player1 (セッション終了 最終 650 チップ) 次回は 500 チップから開始
+[2026-10-08 13:13:43] ADMIN session start JO1_Player1 (500 チップ)
+[2026-10-08 13:13:47] ADMIN reset code JO1_Player1 (セッション終了 最終 500 チップ) 次回は 500 チップから開始
+[2026-10-08 13:14:00] GET /admin 127.0.0.1
+[2026-10-08 13:14:08] ADMIN set default initial chips 500（既存の参加者・セッションは変更なし）
+[2026-10-08 13:14:10] ADMIN set default initial chips 500（既存の参加者・セッションは変更なし）
+[2026-10-08 13:14:50] ADMIN database initialize requested 127.0.0.1
+[2026-10-08 13:14:50] ADMIN database initialized (backup system-20261008-131450.db; deleted codes=3 sessions=7 history=15)
+[2026-10-08 13:15:06] GET /admin 127.0.0.1
+[2026-10-08 14:57:57] GET /dealer 127.0.0.1
+[2026-10-08 14:59:51] SERVER stop
+[2026-10-08 15:00:08] SERVER start http port 8000
+[2026-10-08 15:00:10] GET / 127.0.0.1
+[2026-10-08 15:00:13] GET /admin 127.0.0.1
+[2026-10-08 15:00:25] ADMIN login 127.0.0.1
+[2026-10-09 00:22:56] SERVER start http port 8000
+[2026-10-09 00:23:06] GET / 127.0.0.1
+[2026-10-09 00:23:28] GET / 127.0.0.1
+[2026-10-09 00:23:32] GET /admin 127.0.0.1
+[2026-10-09 00:23:49] ADMIN login 127.0.0.1
+[2026-10-09 00:23:50] GET /dealer 127.0.0.1
+[2026-10-09 00:25:12] ADMIN add code Tekiemon (500 チップ)
+[2026-10-09 00:25:14] ADMIN session start Tekiemon (500 チップ)
+[2026-10-09 00:26:05] CHIP +46543 Tekiemon Blackjack by Tekika -> 47043
+[2026-10-09 00:27:23] SERVER stop
+[2026-10-09 01:10:11] SERVER start http port 8000
+[2026-10-09 01:10:14] GET /admin 127.0.0.1
+[2026-10-09 01:19:49] GET / 192.168.0.223
+[2026-10-09 01:19:54] GET /dealer 192.168.0.223
+[2026-10-09 01:20:02] GET /admin 127.0.0.1
+[2026-10-09 01:20:19] ADMIN login 127.0.0.1
+[2026-10-09 01:21:26] ADMIN add code JO1_player1 (500 チップ)
+[2026-10-09 01:21:34] ADMIN session start JO1_player1 (500 チップ)
+[2026-10-09 01:22:06] CHIP -100 JO1_player1 Poker by Ogi -> 400
+[2026-10-09 01:22:44] GET /admin 192.168.0.223
+[2026-10-09 01:23:06] GET /dealer 192.168.0.223
+[2026-10-09 01:23:37] CHIP +100 JO1_player1 Poker by Ogi -> 500
+[2026-10-09 01:28:02] GET / 192.168.0.105
+[2026-10-09 01:28:05] GET / 192.168.0.105
+[2026-10-09 01:28:09] GET /dealer 192.168.0.105
+[2026-10-09 01:29:44] GET / 192.168.0.105
+[2026-10-09 01:29:47] GET /dealer 192.168.0.105
+[2026-10-09 01:32:58] SERVER stop
+[2026-10-09 01:38:14] SERVER start https port 8000
+[2026-10-09 01:38:35] GET / 127.0.0.1
+[2026-10-09 01:38:59] GET /dealer 192.168.0.105
+[2026-10-09 01:39:07] GET /admin 127.0.0.1
+[2026-10-09 01:39:13] ADMIN login 127.0.0.1
+[2026-10-09 01:40:32] GET /dealer 192.168.0.105
+[2026-10-09 01:40:57] GET /dealer 192.168.0.105
+[2026-10-09 01:44:12] GET / 192.168.0.105
+[2026-10-09 01:44:31] GET / 192.168.0.105
+[2026-10-09 01:44:36] GET / 192.168.0.105
+[2026-10-09 01:47:37] GET /admin 192.168.0.105
+[2026-10-09 01:47:40] GET /dealer 192.168.0.105
+[2026-10-09 01:48:32] CHIP +60000 JO1_player1 Blackjack by おぎ -> 60500
+[2026-10-13 09:23:16] SERVER start http port 8000
+[2026-10-13 09:26:08] GET / 127.0.0.1
+[2026-10-13 09:26:13] GET /admin 127.0.0.1
+[2026-10-13 09:26:36] ADMIN login 127.0.0.1
+[2026-10-27 09:27:50] SERVER start http port 8000
+[2026-10-27 09:27:58] GET / 127.0.0.1
+[2026-10-27 09:28:11] GET /dealer 127.0.0.1
+[2026-10-27 09:28:18] GET / 127.0.0.1
+[2026-10-27 09:28:21] GET /admin 127.0.0.1
+[2026-10-27 09:28:49] ADMIN login 127.0.0.1
+[2026-10-27 09:29:03] ADMIN code Tekiemon active=False
+[2026-10-27 09:29:18] ADMIN database initialize requested 127.0.0.1
+[2026-10-27 09:29:18] ADMIN database initialized (backup system-20261027-092918.db; deleted codes=2 sessions=2 history=6)
+[2026-10-27 09:29:32] ADMIN add code kkk (500 チップ)
+[2026-10-27 09:29:50] ADMIN session start kkk (500 チップ)
+[2026-10-27 09:29:53] GET /dealer 127.0.0.1
+[2026-10-27 09:30:03] CHIP +50 kkk Poker by ogi -> 550
+[2026-11-10 09:12:17] SERVER start http port 8000
+[2026-11-10 09:12:21] GET / 127.0.0.1
+[2026-11-10 09:14:54] GET /dealer 127.0.0.1
+[2026-11-10 09:14:58] GET /admin 127.0.0.1
+[2026-11-10 09:15:00] ADMIN login 127.0.0.1
+[2026-11-10 09:17:37] ADMIN add code sakurai (1000 チップ)
+[2026-11-10 09:17:40] ADMIN session start sakurai (1000 チップ)
+[2026-11-10 09:17:45] GET /dealer 127.0.0.1
+[2026-11-10 09:18:11] CHIP +100 sakurai Roulette by ogino -> 1100
+[2026-11-10 09:21:07] GET / 127.0.0.1
+[2026-11-10 09:21:30] ADMIN add code a (500 チップ)
+[2026-11-10 09:21:48] ADMIN add code player1 (500 チップ)
+[2026-11-10 09:21:53] ADMIN code player1 active=False
+[2026-11-10 09:21:57] ADMIN reset code player1 (進行中のセッションなし) 次回は 500 チップから開始
+[2026-11-10 09:22:01] ADMIN code player1 active=True
+[2026-11-10 09:28:23] SERVER stop

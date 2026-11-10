@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ディーラー画面</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>ディーラー画面</h1>
+
+  <div class="card">
+    <label for="operator">操作者名（あなたの名前・担当）</label>
+    <input id="operator" type="text" maxlength="40" autocomplete="off">
+
+    <label for="codeInput">参加者コード（QRスキャナー／手入力）</label>
+    <div class="row">
+      <input id="codeInput" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus>
+      <button id="searchBtn" class="fit">検索</button>
+    </div>
+    <div class="row" style="margin-top:8px">
+      <button id="camBtn">QRを読み取る（カメラ）</button>
+    </div>
+    <div id="camBox" class="hidden" style="margin-top:8px">
+      <video id="video" muted playsinline></video>
+      <button id="camStop" style="width:100%;margin-top:6px">カメラを止める</button>
+    </div>
+    <div id="lookupMsg" class="msg"></div>
+  </div>
+
+  <div id="partBox" class="card hidden">
+    <div class="small">参加者コード</div>
+    <div id="partCode" class="code"></div>
+    <div id="points" class="points"></div>
+    <div id="sessionInfo" class="status"></div>
+
+    <div id="changeBox">
+      <div class="presets">
+        <button data-d="100" class="plus">+100</button>
+        <button data-d="-100" class="minus">-100</button>
+        <button data-d="50" class="plus">+50</button>
+        <button data-d="-50" class="minus">-50</button>
+        <button data-d="10" class="plus">+10</button>
+        <button data-d="-10" class="minus">-10</button>
+      </div>
+      <label for="delta">チップ変更量（＋で加算、－で減算。直接入力もできます）</label>
+      <input id="delta" type="number" inputmode="numeric" step="1">
+      <div id="preview" class="status"></div>
+      <label for="game">ゲーム</label>
+      <select id="game"></select>
+      <div style="margin-top:12px"><button id="applyBtn" class="primary">チップ変更</button></div>
+    </div>
+    <div id="resultMsg" class="msg"></div>
+    <div style="margin-top:8px"><button id="nextBtn" style="width:100%">次の参加者（クリア）</button></div>
+  </div>
+</div>
+
+<script src="/static/jsQR.js"></script>
+<script src="/static/app.js"></script>
+<script src="/static/qr-reader.js"></script>
+<script src="/static/dealer.js"></script>
+</body>
+</html>

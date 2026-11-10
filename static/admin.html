@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>管理画面</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="wide">
+  <h1>管理画面</h1>
+
+  <div id="loginBox" class="card wrap" style="margin-left:0">
+    <label for="pw">管理者パスワード</label>
+    <input id="pw" type="password" autocomplete="off">
+    <div style="margin-top:8px"><button id="loginBtn" class="primary">ログイン</button></div>
+    <div id="loginMsg" class="msg"></div>
+  </div>
+
+  <div id="main" class="hidden">
+    <div id="globalMsg" class="msg"></div>
+
+    <div class="card">
+      <h2>参加者コード一覧</h2>
+      <div class="row" style="margin-bottom:8px">
+        <button id="reloadBtn" class="fit">更新</button>
+        <label class="fit" style="margin:0;align-self:center"><input id="auto" type="checkbox" style="width:auto"> 5秒ごとに自動更新</label>
+        <button id="logoutBtn" class="fit">ログアウト</button>
+      </div>
+      <div class="scroll">
+        <table id="partTable">
+          <thead><tr><th>コード</th><th>状態</th><th>現在チップ</th><th>セッション開始</th><th>最終更新</th><th>操作</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card">
+        <h2>新規コード登録</h2>
+        <label for="newCode">参加者コード（任意の文字列）</label>
+        <input id="newCode" type="text" maxlength="64" autocomplete="off" autocapitalize="off">
+        <label for="newPts">初期チップ（「チップ設定」の値が自動で入ります。登録ごとに変更もできます）</label>
+        <input id="newPts" type="number" min="0" step="1">
+        <div style="margin-top:8px"><button id="addBtn">登録</button></div>
+      </div>
+      <div class="card">
+        <h2>チップ設定</h2>
+        <p class="small">現在の初期チップ数: <b id="defCurrent">—</b>
+          （新しく登録するプレイヤーの初期チップ数になります。登録済みのプレイヤー・進行中のセッションは変わりません）</p>
+        <label for="defChips">初期チップ数（0以上の整数）</label>
+        <input id="defChips" type="number" min="0" step="1">
+        <div style="margin-top:8px"><button id="defSaveBtn">保存</button></div>
+      </div>
+      <div class="card">
+        <h2>チップ手動修正（履歴に「管理者修正」として追加）</h2>
+        <label for="adjCode">参加者コード</label>
+        <input id="adjCode" type="text" autocomplete="off" autocapitalize="off">
+        <label for="adjDelta">チップ変更量（例: +20 / -100）</label>
+        <input id="adjDelta" type="number" step="1">
+        <label for="adjNote">理由（備考）</label>
+        <input id="adjNote" type="text" maxlength="200">
+        <div style="margin-top:8px"><button id="adjBtn" class="danger">修正を実行</button></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>履歴確認</h2>
+      <div class="row">
+        <div><label for="histCode">参加者コード（空欄で全体の最新500件）</label>
+          <input id="histCode" type="text" autocomplete="off" autocapitalize="off"></div>
+        <div><label for="histSession">セッション</label>
+          <select id="histSession"><option value="">すべて</option></select></div>
+        <button id="histBtn" class="fit" style="align-self:flex-end">表示</button>
+      </div>
+      <div class="scroll" style="margin-top:8px">
+        <table id="histTable">
+          <thead><tr><th>時刻</th><th>コード</th><th>セッション</th><th>種別</th><th>ゲーム</th><th>チップ変更量</th><th>変更後</th><th>操作者</th><th>端末</th><th>備考</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card">
+        <h2>ゲーム名の管理</h2>
+        <p class="small">名前を変えても、過去の履歴には当時の名前が残ります。</p>
+        <div class="scroll"><table id="gameTable"><thead><tr><th>名前</th><th>状態</th><th>操作</th></tr></thead><tbody></tbody></table></div>
+        <div class="row" style="margin-top:8px">
+          <input id="newGame" type="text" maxlength="40" placeholder="新しいゲーム名">
+          <button id="addGameBtn" class="fit">追加</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>ゲーム別集計（ゲームでの増減のみ）</h2>
+        <div class="scroll"><table id="sumTable"><thead><tr><th>ゲーム</th><th>回数</th><th>加算合計</th><th>減算合計</th><th>差引</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card">
+        <h2>バックアップ</h2>
+        <button id="backupBtn">今すぐバックアップを作成</button>
+        <p class="small">backups/ フォルダに保存されます（現在のデータは変更されません）。</p>
+        <div class="scroll"><table id="bakTable"><thead><tr><th>ファイル</th><th>サイズ</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="card">
+        <h2>サーバーログ（最新）</h2>
+        <pre id="logBox"></pre>
+      </div>
+    </div>
+
+    <div class="card dangerzone">
+      <h2>システム管理: データベース初期化</h2>
+      <p>イベント終了後・テスト終了後に、<b>参加者コード・セッション・チップ履歴をすべて削除</b>して、まっさらな状態から始めるための機能です。</p>
+      <p class="small">削除しない: 管理者パスワード、ゲーム設定、チップ設定（初期チップ数）。<br>
+        実行前に自動でバックアップ（backups/）を作成し、バックアップに失敗した場合は初期化しません。<b>初期化は元に戻せません。</b></p>
+      <label for="initConfirm">実行するには <b>INITIALIZE</b> と入力してください</label>
+      <input id="initConfirm" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="INITIALIZE">
+      <div style="margin-top:8px"><button id="initBtn" class="danger" disabled>データベースを初期化する</button></div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+<script src="/static/admin.js"></script>
+</body>
+</html>

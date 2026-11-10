@@ -1,0 +1,46 @@
+/* 軽量CSS: 外部フォント・画像・アニメーションなし */
+* { box-sizing: border-box; }
+body { margin: 0; padding: 12px; font-family: "Meiryo", "Hiragino Sans", "Yu Gothic", sans-serif;
+       font-size: 18px; color: #111; background: #f4f4f4; }
+h1 { font-size: 22px; margin: 0 0 10px; }
+h2 { font-size: 18px; margin: 0 0 8px; }
+.wrap { max-width: 560px; margin: 0 auto; }
+.wide { max-width: 1100px; margin: 0 auto; }
+.card { background: #fff; border: 1px solid #bbb; border-radius: 6px; padding: 12px; margin-bottom: 12px; }
+label { display: block; font-size: 15px; margin: 8px 0 3px; }
+input, select, button { font-size: 18px; padding: 10px; border: 1px solid #777; border-radius: 4px; background: #fff; }
+input, select { width: 100%; }
+button { cursor: pointer; background: #e8e8e8; min-height: 44px; }
+button.primary { background: #1565c0; color: #fff; border-color: #0d47a1; width: 100%; font-size: 22px; min-height: 60px; }
+button.danger { background: #c62828; color: #fff; border-color: #8e0000; }
+button:disabled { opacity: .45; cursor: default; }
+.row { display: flex; gap: 8px; }
+.row > * { flex: 1; }
+.row > .fit { flex: 0 0 auto; }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.presets button { flex: 1 0 28%; font-size: 22px; min-height: 56px; }
+.plus { color: #0b6b0b; }
+.minus { color: #b00020; }
+.code { font-size: 26px; font-weight: bold; word-break: break-all; }
+.points { font-size: 56px; font-weight: bold; text-align: center; margin: 6px 0; }
+.status { text-align: center; font-size: 16px; color: #444; }
+.msg { padding: 10px; margin: 8px 0; border-radius: 4px; font-size: 17px; display: none; }
+.msg.ok { display: block; background: #dff3df; border: 1px solid #5a9a5a; }
+.msg.err { display: block; background: #fde0e0; border: 1px solid #c04040; }
+.msg.info { display: block; background: #e6eef9; border: 1px solid #6a8cc0; }
+video { width: 100%; max-height: 320px; background: #000; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; background: #fff; }
+th, td { border: 1px solid #bbb; padding: 4px 6px; text-align: left; vertical-align: top; }
+th { background: #e8e8e8; }
+td.num { text-align: right; white-space: nowrap; }
+.scroll { overflow-x: auto; }
+.small { font-size: 14px; }
+.inactive td { color: #888; }
+.tabs button { min-height: 36px; padding: 4px 8px; font-size: 15px; }
+pre { font-size: 13px; background: #fff; border: 1px solid #bbb; padding: 6px; max-height: 240px; overflow: auto; margin: 0; }
+a.btn { display: block; text-align: center; padding: 18px; margin: 10px 0; background: #1565c0; color: #fff;
+        text-decoration: none; border-radius: 6px; font-size: 22px; }
+.hidden { display: none; }
+.card.dangerzone { border: 3px solid #c62828; background: #fff4f4; margin-top: 28px; }
+.card.dangerzone h2 { color: #8e0000; }
+button.reset { background: #fff3e0; border-color: #e65100; color: #8a3a00; }
